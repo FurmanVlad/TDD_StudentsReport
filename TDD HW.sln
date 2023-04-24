@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32002.185
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TDD HW", "TDD HW\TDD HW.csproj", "{DACAEE1E-68D5-4F1F-851C-B1306CF1E68D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TDD HWTests", "TDD HWTests\TDD HWTests.csproj", "{359CE13E-9BB2-4CAC-ADB8-8144D7B9A438}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{394D00C2-63F4-488D-B497-98D524B45CE0}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DACAEE1E-68D5-4F1F-851C-B1306CF1E68D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DACAEE1E-68D5-4F1F-851C-B1306CF1E68D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DACAEE1E-68D5-4F1F-851C-B1306CF1E68D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DACAEE1E-68D5-4F1F-851C-B1306CF1E68D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{359CE13E-9BB2-4CAC-ADB8-8144D7B9A438}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{359CE13E-9BB2-4CAC-ADB8-8144D7B9A438}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{359CE13E-9BB2-4CAC-ADB8-8144D7B9A438}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{359CE13E-9BB2-4CAC-ADB8-8144D7B9A438}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B82C500E-D97D-4E77-9BE0-B0219AA4EC67}
+	EndGlobalSection
+EndGlobal
