@@ -16,6 +16,8 @@ namespace TDD_HW.Tests
     {
         private Student student;
 
+
+        // initializes the "student" object before each test method is run
         [TestInitialize]
         public void Setup()
         {
@@ -25,6 +27,8 @@ namespace TDD_HW.Tests
 
         //////////////////////////// AverageGrade ////////////////////////////
 
+
+        // Tests whether the "AverageGrade" method returns the correct average when valid grades are provided.
         [TestMethod]
         public void AverageGrade_ReturnsCorrectAverage_GivenValidGrades()
         {
@@ -36,6 +40,8 @@ namespace TDD_HW.Tests
         }
 
 
+        // Tests whether the "AverageGrade" method returns the correct average
+        // when at least one "777" value is present in the grades array
         [TestMethod]
         public void AverageGrade_ReturnsNoGrade_GivenAtLeastOneNoGrade()
         {
@@ -46,6 +52,8 @@ namespace TDD_HW.Tests
             Assert.AreEqual(88.75, average);
         }
 
+
+        // Tests whether the "AverageGrade" method returns 0 when all grades are equal to "777"
         [TestMethod]
         public void AverageGrade_WhenAllGradesAre777_ReturnsZero()
         {
@@ -56,6 +64,8 @@ namespace TDD_HW.Tests
             Assert.AreEqual(0, result);
         }
 
+
+        // Tests whether the "AverageGrade" method returns 0 when no grades are provided
         [TestMethod]
         public void AverageGrade_WhenNoGradesAreProvided_ReturnsZero()
         {

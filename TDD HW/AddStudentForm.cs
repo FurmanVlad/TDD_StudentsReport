@@ -18,6 +18,8 @@ namespace TDD_HW
             InitializeComponent();
         }
 
+
+        // Returns true if the input string contains only alphabetical characters
         public bool IsAlphabetic(string s) {
             if (s == null || s.Length == 0) return false;
             foreach (char c in s)
@@ -30,6 +32,7 @@ namespace TDD_HW
             return true;
         }
 
+        // Returns true if the input string contains only numeric characters
         public bool IsNumeric(string s)
         {
             if (s == null || s.Length == 0) return false;
@@ -43,6 +46,8 @@ namespace TDD_HW
             return true;
         }
 
+
+        // Returns true if the input string has a length of exactly 9 characters
         public bool IsValidIdLength(string s)
         {
 
@@ -52,6 +57,8 @@ namespace TDD_HW
             return false;
         }
 
+
+        // Returns true if the input string is a 10-digit phone number starting with "05"
         public bool IsValidPhone(string s)
         {
             if (s == null) return false;
@@ -66,6 +73,8 @@ namespace TDD_HW
             return false;
         }
 
+
+        // Returns true if the input string is a valid email address in the format of "xxx@xxx.xxx"
         public bool IsValidEmail(string s)
         {
             if (s == null) return false;
@@ -86,6 +95,8 @@ namespace TDD_HW
             return false;
         }
 
+
+        // Returns true if the input integer is between 0-100 or is equal to 777
         public bool IsValidGrade(int n)
         {
             if ((n >= 0 && n <= 100) || n == 777) {
@@ -124,23 +135,9 @@ namespace TDD_HW
             }
             
             student.Id = idTextBox.Text;
-            /*
-            // Validate and set the email address
-            if (string.IsNullOrWhiteSpace(emailTextbox.Text))
-            {
-                MessageBox.Show("Please enter an email address.");
-                return null;
-            }
-            student.Email = emailTextbox.Text;
 
-            // Validate and set the phone number
-            if (string.IsNullOrWhiteSpace(phoneNumberTextbox.Text))
-            {
-                MessageBox.Show("Please enter a phone number.");
-                return null;
-            }
-            student.PhoneNumber = phoneNumberTextbox.Text;
-            */
+
+            // Validate and set the student email
             if (string.IsNullOrWhiteSpace(emailTextbox.Text) || !IsValidEmail(emailTextbox.Text))
             {
                 MessageBox.Show("Please enter a valid email address.");
@@ -199,13 +196,6 @@ namespace TDD_HW
                 return null;
             }
             int.TryParse(grade5Textbox.Text, out grades[4]);
-
-
-            //if (!int.TryParse(grade2Textbox.Text, out grades[1]) || grades[1] < 0 || grades[1] > 100)
-            //{
-            //    MessageBox.Show("Please enter a valid grade for the second subject.");
-            //    return null;
-            //}
 
             student.Grades = grades;
 

@@ -41,13 +41,14 @@
             this.StudentReport.Size = new System.Drawing.Size(800, 450);
             this.StudentReport.TabIndex = 0;
             // 
-            // StudentsForm
+            // StudentsReportForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.StudentReport);
-            this.Name = "StudentsForm";
+            this.Name = "StudentsReportForm";
+            this.ShowIcon = false;
             this.Text = "Form2";
             this.ResumeLayout(false);
 

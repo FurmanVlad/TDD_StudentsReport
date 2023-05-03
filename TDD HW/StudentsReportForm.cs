@@ -14,6 +14,9 @@ namespace TDD_HW
     {
         private List<Student> students;
 
+
+        // Initializes the form, sorts the list of students by average grade,
+        // displays the sorted list of students and the time taken for sorting.
         public StudentsReportForm(List<Student> s)
         {
             InitializeComponent();
@@ -26,6 +29,8 @@ namespace TDD_HW
             DisplayStudents(milliseconds);
         }
 
+
+        // Displays each student in the sorted list, adds the time taken for sorting to the list.
         private void DisplayStudents(double m)
         {
 
@@ -61,7 +66,11 @@ namespace TDD_HW
         //    return s;
         //}
 
-        ///////////////// Quick sort - nlogn /////////////////
+
+
+
+        ///////////////// Quick sort - nlogn ///////////////// 
+        // Sorts the input list of students by average grade using the QuickSort algorithm
         public List<Student> SortStudentsByAverageGrade(List<Student> s)
         {
             QuickSort(s, 0, s.Count - 1);

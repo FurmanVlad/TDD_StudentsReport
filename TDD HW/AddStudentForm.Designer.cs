@@ -260,6 +260,7 @@
             this.Controls.Add(this.lastNameTextbox);
             this.Controls.Add(this.firstNameTextBox);
             this.Name = "AddStudentForm";
+            this.ShowIcon = false;
             this.Text = "Form2";
             this.ResumeLayout(false);
             this.PerformLayout();

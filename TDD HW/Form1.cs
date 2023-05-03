@@ -167,25 +167,32 @@ namespace TDD_HW
 
         }
 
-        //
+        // Adding a student to studentsList after adding manually
         private void pictureBox3_Click(object sender, EventArgs e)
-        {      
+        {
+            int flag = 0;
             AddStudentForm addStudentForm = new AddStudentForm();
-            DialogResult result = addStudentForm.ShowDialog();
-
-            if (result == DialogResult.OK)
+            while (flag == 0)
             {
-                Student student = addStudentForm.GetStudent();
-                if (student != null)
+                DialogResult result = addStudentForm.ShowDialog();
+                if (result == DialogResult.OK)
                 {
-                    studentsList.Add(student);
-                    studentsCounter++;
-                    _activeStudentsLabel.Text = $"Active Students: {studentsCounter}";
+                    Student student = addStudentForm.GetStudent();
+                    if (student != null)
+                    {
+                        studentsList.Add(student);
+                        studentsCounter++;
+                        _activeStudentsLabel.Text = $"Active Students: {studentsCounter}";
+                        break;
+                    }
                 }
+
+                // User exits the app with X button
+                else if (result == DialogResult.Cancel) flag = 1;
             }
         }
 
-
+        // Display students list
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
@@ -221,10 +228,26 @@ namespace TDD_HW
             }
         }
 
+        // Opening mail app with mail to contact
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             System.Diagnostics.Process.Start("mailto:vladfu@ac.sce.ac.il");
 
+        }
+
+        // User want to exit the app with X button event handler
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (e.CloseReason == CloseReason.UserClosing)
+            {
+                e.Cancel = true;
+                DialogResult result = MessageBox.Show("Are you sure you want to exit?", "Confirm Exit", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (result == DialogResult.Yes)
+                {
+                    // exit the application
+                    Environment.Exit(0);
+                }
+            }
         }
     }
 
@@ -238,10 +261,7 @@ namespace TDD_HW
         public int[] Grades { get; set; }
         public double Average { get; set; }
 
-        public Student()
-        {
-
-        }
+        public Student() { }
         public Student(string id, string firstName, string lastName, string email, string phoneNumber, int[] grades)
         {
             this.Id = id;
@@ -260,7 +280,8 @@ namespace TDD_HW
             string gradesStr = string.Join(", ", Grades);
             return $"ID: {Id}\t{firstName}\t{lastName}\tEmail: {email}\tPhone: {PhoneNumber}\t Grades: {gradesStr}\t\tAverage: {Average.ToString("F1")}";
         }
-
+        
+        // Getting the average grade of a student, if 777, we don't count it
         public double AverageGrade()
         {
             if (Grades != null && Grades.Length != 5) return 0;

@@ -28,6 +28,7 @@ namespace TDD_HW.Tests
 
 
         [TestMethod]
+        // Checks if actually return value and array has not lost records
         public void SortStudentsByAverageGrade_ChecksIfActuallyReturnValue_AND_ArrayHasNotLostRecords()
         {
             StudentsReportForm form = new StudentsReportForm(students);
@@ -51,6 +52,7 @@ namespace TDD_HW.Tests
         }
 
         [TestMethod]
+        // Sorts students by average grade in descending order
         public void SortStudentsByAverageGrade_SortsStudentsByAverageGradeInDescendingOrder()
         {
             StudentsReportForm form = new StudentsReportForm(students);
